@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "bun run /home/ubuntu/.claude/plugins/cache/cc-track/scripts/statusline.ts"
+  }
+}

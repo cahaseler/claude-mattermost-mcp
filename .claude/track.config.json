@@ -1,0 +1,62 @@
+{
+  "hooks": {
+    "capture_plan": {
+      "enabled": false
+    },
+    "stop_review": {
+      "enabled": false
+    },
+    "edit_validation": {
+      "enabled": false,
+      "typecheck": {
+        "enabled": false
+      },
+      "lint": {
+        "enabled": false
+      }
+    },
+    "pre_compact": {
+      "enabled": false
+    },
+    "pre_tool_validation": {
+      "enabled": false
+    }
+  },
+  "features": {
+    "statusline": {
+      "enabled": true
+    },
+    "git_branching": {
+      "enabled": false
+    },
+    "private_journal": {
+      "enabled": false
+    },
+    "branch_protection": {
+      "enabled": false,
+      "protected_branches": ["main", "master"],
+      "allow_gitignored": true
+    },
+    "api_timer": {
+      "display": "sonnet-only"
+    },
+    "github_integration": {
+      "enabled": false,
+      "auto_create_issues": false,
+      "use_issue_branches": false,
+      "auto_create_prs": false
+    },
+    "code_review": {
+      "enabled": false,
+      "tool": "claude"
+    },
+    "websearch_validation": {
+      "enabled": false
+    }
+  },
+  "logging": {
+    "enabled": true,
+    "level": "info",
+    "retentionDays": 7
+  }
+}
