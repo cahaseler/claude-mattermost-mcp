@@ -1,11 +1,14 @@
 // ABOUTME: Wrapper around @mattermost/client for MCP tool implementations
 // ABOUTME: Handles authentication, posting with identity, search, and recent messages
 
-import { Client4 } from '@mattermost/client';
+import * as MattermostClientLib from '@mattermost/client';
 import { Message, MattermostConfig } from './types.js';
 
+const { Client4 } = MattermostClientLib;
+type Client4Type = InstanceType<typeof Client4>;
+
 export class MattermostClient {
-  private client: Client4;
+  private client: Client4Type;
   private channelId: string;
   private teamId: string | null = null;
 
@@ -53,7 +56,7 @@ export class MattermostClient {
     // Extract posts from results and format
     const posts = Object.values(results.posts).slice(0, limit);
 
-    return posts.map(post => {
+    return posts.map((post: any) => {
       const overrideUsername = post.props?.override_username;
       return {
         username: typeof overrideUsername === 'string' ? overrideUsername : post.user_id,
@@ -72,9 +75,9 @@ export class MattermostClient {
     );
 
     // Posts come in reverse chronological order
-    const postArray = posts.order.map(id => posts.posts[id]);
+    const postArray = posts.order.map((id: string) => posts.posts[id]);
 
-    return postArray.map(post => {
+    return postArray.map((post: any) => {
       const overrideUsername = post.props?.override_username;
       return {
         username: typeof overrideUsername === 'string' ? overrideUsername : post.user_id,
