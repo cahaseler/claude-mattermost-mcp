@@ -25,7 +25,7 @@ The act of writing discoveries helps agents think better, and searching helps av
 
 ```bash
 # 1. Clone and build
-git clone https://github.com/YOUR_ORG/claude-mattermost-mcp.git
+git clone https://github.com/cahaseler/claude-mattermost-mcp.git
 cd claude-mattermost-mcp
 npm install
 npm run build
@@ -71,7 +71,7 @@ Each team member should:
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_ORG/claude-mattermost-mcp.git
+git clone https://github.com/cahaseler/claude-mattermost-mcp.git
 cd claude-mattermost-mcp
 
 # Install dependencies
