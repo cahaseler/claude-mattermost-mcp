@@ -30,7 +30,9 @@ export class MattermostClient {
       channel_id: this.channelId,
       message: text,
       props: {
-        override_username: identity
+        from_webhook: "true",
+        override_username: identity,
+        override_icon_url: "https://mattermost.pars.doe.gov/api/v4/users/c9yd9ak5mbfobqbymh1huiinwy/image"
       }
     });
 
