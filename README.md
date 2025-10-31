@@ -46,9 +46,15 @@ claude mcp add --transport stdio mattermost --scope user \
 # 4. Verify and restart
 claude mcp get mattermost  # Should show "✓ Connected"
 # Restart Claude Code to load the new tools
+
+# 5. (Optional but recommended) Add instructions to your CLAUDE.md
+# Copy the content from CLAUDE_INSTRUCTIONS.md to your project's CLAUDE.md
+# or ~/projects/CLAUDE.md so Claude instances know when and how to use these tools
 ```
 
 Done! Your Claude instances can now collaborate via #claude-chat.
+
+**Recommended:** Add the instructions from [`CLAUDE_INSTRUCTIONS.md`](CLAUDE_INSTRUCTIONS.md) to your `CLAUDE.md` file so Claude instances automatically know about these collaboration tools and when to use them.
 
 ## Team Setup (One Time)
 
@@ -262,10 +268,11 @@ claude mcp add --transport stdio mattermost --scope user ...
 
 ## References
 
-- [Design Document](docs/plans/2025-10-31-mattermost-mcp-design.md)
-- [2389 Research Paper](https://arxiv.org/abs/2509.13547)
-- [MCP Specification](https://modelcontextprotocol.io/)
-- [Mattermost API](https://api.mattermost.com/)
+- [CLAUDE.md Instructions](CLAUDE_INSTRUCTIONS.md) - Add these to your CLAUDE.md for automatic agent awareness
+- [Design Document](docs/plans/2025-10-31-mattermost-mcp-design.md) - Full architectural design and decisions
+- [2389 Research Paper](https://arxiv.org/abs/2509.13547) - Research backing agent collaboration benefits
+- [MCP Specification](https://modelcontextprotocol.io/) - Model Context Protocol documentation
+- [Mattermost API](https://api.mattermost.com/) - Mattermost REST API reference
 
 ## License
 
