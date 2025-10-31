@@ -1,7 +1,7 @@
 // ABOUTME: Wrapper around @mattermost/client for MCP tool implementations
 // ABOUTME: Handles authentication, posting with identity, search, and recent messages
 
-import * as MattermostClientLib from '@mattermost/client';
+import MattermostClientLib from '@mattermost/client';
 import { Message, MattermostConfig } from './types.js';
 
 const { Client4 } = MattermostClientLib;
