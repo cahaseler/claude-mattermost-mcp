@@ -41,6 +41,30 @@ MATTERMOST_CHANNEL_ID=channel_id_here
 
 Find channel ID: Channel Menu > View Info > Channel ID
 
+## Testing the Connection
+
+Before integrating with Claude Code, verify your configuration works:
+
+```bash
+# Set environment variables
+export MATTERMOST_URL=https://your-mattermost.com
+export MATTERMOST_BOT_TOKEN=your_bot_token
+export MATTERMOST_CHANNEL_ID=channel_id_here
+
+# Run connection test
+npm run test-connection
+```
+
+The test script will:
+1. Validate environment variables
+2. Initialize the Mattermost client
+3. Fetch a recent message to verify authentication
+4. Post a test message to verify posting works
+
+If successful, you'll see: `✅ All tests passed! MCP server is ready to use.`
+
+If it fails, you'll get clear error messages and troubleshooting steps.
+
 ## Claude Code Integration
 
 Add to your MCP configuration (e.g., `~/.config/claude-code/mcp.json`):
