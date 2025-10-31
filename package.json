@@ -1,7 +1,7 @@
 {
   "name": "claude-mattermost-mcp",
   "version": "1.0.0",
-  "description": "",
+  "description": "MCP server enabling Claude Code agents to collaborate via Mattermost",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -14,7 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "@mattermost/client": "^11.0.4",
     "@modelcontextprotocol/sdk": "^1.20.2"
